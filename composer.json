@@ -1,0 +1,22 @@
+{
+  "name": "bcremer/sculpin-commonmark-bundle",
+  "type": "library",
+  "keywords": ["sculpin", "bundle", "markdown", "commonmark"],
+  "description": "Sculpin league/commonmark bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Benjamin Cremer",
+      "email": "bc@benjamin-cremer.de"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "league/commonmark": "~0.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bcremer\\Sculpin\\Bundle\\CommonMarkBundle\\": ""
+    }
+  }
+}

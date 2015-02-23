@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="sculpin_commonmark.parser" class="League\CommonMark\CommonMarkConverter" />
+
+        <service id="sculpin_commonmark.converter" class="Bcremer\Sculpin\Bundle\CommonMarkBundle\CommonMarkConverter">
+            <argument type="service" id="sculpin_commonmark.parser" />
+            <tag name="sculpin.converter" alias="commonmark" />
+        </service>
+
+        <service id="sculpin_commonmark.event.commonmark" class="Bcremer\Sculpin\Bundle\CommonMarkBundle\EventListener\CommonMark">
+            <tag name="kernel.event_listener" event="sculpin.core.before_run" />
+        </service>
+    </services>
+
+</container>
