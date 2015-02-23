@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "16c5cf8f437fe44ed048efa2d460b895",
+    "hash": "699a46601368d0d9d0e0e9fceb28ac38",
     "packages": [
         {
             "name": "league/commonmark",
@@ -73,7 +73,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.3.2"
+        "php": ">=5.4.0"
     },
     "platform-dev": []
 }
