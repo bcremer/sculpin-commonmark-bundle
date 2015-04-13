@@ -1,23 +1,31 @@
 <?php
 namespace Bcremer\Sculpin\Bundle\CommonMarkBundle;
 
-use League\CommonMark\CommonMarkConverter as LeagueCommonMarkConverter;
+use League\CommonMark\DocParser;
+use League\CommonMark\HtmlRendererInterface;
 use Sculpin\Core\Converter\ConverterContextInterface;
 use Sculpin\Core\Converter\ConverterInterface;
 
 class CommonMarkConverter implements ConverterInterface
 {
     /**
-     * @var LeagueCommonMarkConverter
+     * @var DocParser
      */
-    protected $converter;
+    private $parser;
 
     /**
-     * @param LeagueCommonMarkConverter $converter Parser
+     * @var HtmlRendererInterface
      */
-    public function __construct(LeagueCommonMarkConverter $converter)
+    private $renderer;
+
+    /**
+     * @param DocParser             $parser
+     * @param HtmlRendererInterface $renderer
+     */
+    public function __construct(DocParser $parser, HtmlRendererInterface $renderer)
     {
-        $this->converter = $converter;
+        $this->parser = $parser;
+        $this->renderer = $renderer;
     }
 
     /**
@@ -25,6 +33,10 @@ class CommonMarkConverter implements ConverterInterface
      */
     public function convert(ConverterContextInterface $converterContext)
     {
-        $converterContext->setContent($this->converter->convertToHtml($converterContext->content()));
+        $documentAST = $this->parser->parse($converterContext->content());
+
+        $converterContext->setContent(
+            $this->renderer->renderBlock($documentAST)
+        );
     }
 }
