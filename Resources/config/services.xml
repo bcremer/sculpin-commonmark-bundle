@@ -4,10 +4,21 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="sculpin_commonmark.parser" class="League\CommonMark\CommonMarkConverter" />
+        <service id="sculpin_commonmark.environment" class="League\CommonMark\Environment">
+            <factory class="League\CommonMark\Environment" method="createCommonMarkEnvironment" />
+        </service>
+
+        <service id="sculpin_commonmark.docparser" class="League\CommonMark\DocParser">
+            <argument type="service" id="sculpin_commonmark.environment" />
+        </service>
+
+        <service id="sculpin_commonmark.htmlrenderer" class="League\CommonMark\HtmlRenderer" >
+            <argument type="service" id="sculpin_commonmark.environment" />
+        </service>
 
         <service id="sculpin_commonmark.converter" class="Bcremer\Sculpin\Bundle\CommonMarkBundle\CommonMarkConverter">
-            <argument type="service" id="sculpin_commonmark.parser" />
+            <argument type="service" id="sculpin_commonmark.docparser" />
+            <argument type="service" id="sculpin_commonmark.htmlrenderer" />
             <tag name="sculpin.converter" alias="commonmark" />
         </service>
 

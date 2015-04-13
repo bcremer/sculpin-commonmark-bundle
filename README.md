@@ -31,6 +31,15 @@ class SculpinKernel extends \Sculpin\Bundle\SculpinBundle\HttpKernel\AbstractKer
 }
 ```
 
+## Defined services
+This bundle defines the following services in the sculpin DI Container:
+
+* `sculpin_commonmark.environment`
+* `sculpin_commonmark.docparser` 
+* `sculpin_commonmark.htmlrenderer`
+* `sculpin_commonmark.converter`
+* `sculpin_commonmark.event.commonmark`
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE) for more information.
