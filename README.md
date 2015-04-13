@@ -1,6 +1,6 @@
 # Sculpin CommonMark Bundle
 
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![Latest Version](https://img.shields.io/packagist/v/bcremer/sculpin-commonmark-bundle.svg?style=flat-square)](https://packagist.org/packages/bcremer/sculpin-commonmark-bundle)
 
 [Sculpin](http://sculpin.io) bundle that integrates the [league/commonmark](https://github.com/thephpleague/commonmark) markdown parser.
