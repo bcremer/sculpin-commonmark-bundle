@@ -12,7 +12,7 @@
 ```json
 {
     "require": {
-        "bcremer/sculpin-commonmark-bundle": "dev-master"
+        "bcremer/sculpin-commonmark-bundle": "~0.2"
     }
 }
 ```
