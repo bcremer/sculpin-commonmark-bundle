@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
                 ->arrayNode('extensions')
-                    ->defaultValue(['md', 'mdown', 'markdown'])
+                    ->defaultValue(['md', 'mdown', 'mkdn', 'markdown'])
                     ->prototype('scalar')->end()
                 ->end()
             ->end();
