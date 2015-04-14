@@ -35,23 +35,23 @@ class SculpinKernel extends \Sculpin\Bundle\SculpinBundle\HttpKernel\AbstractKer
 ```
 
 ## Extensibility
-This bundle provides access to the low level component of the `thephpleague/commonmark` package.
-For more information about `thephpleague/commonmark` customization please see [Advanced Usage & Customization](https://github.com/thephpleague/commonmark#advanced-usage--customization) and 
+This bundle provides access to the low level component of the `league/commonmark` package.
+For more information about `league/commonmark` customization please see [Advanced Usage & Customization](https://github.com/thephpleague/commonmark#advanced-usage--customization) and
 [Community Extensions](https://github.com/thephpleague/commonmark#community-extensions).
 
 ### Defined services
 This bundle defines the following services in the sculpin DI Container:
 
 * `sculpin_commonmark.environment`
-* `sculpin_commonmark.docparser` 
+* `sculpin_commonmark.docparser`
 * `sculpin_commonmark.htmlrenderer`
 * `sculpin_commonmark.converter`
 * `sculpin_commonmark.event.commonmark`
 
-### Defined DI Tags 
+### Defined DI Tags
 This bundle handles the following [Dependency Injection Tags](http://symfony.com/doc/current/components/dependency_injection/tags.html):
- 
-* `sculpin_commonmark.extension`: To add a implementation of [`League\CommonMark\Extension\ExtensionInterface`](https://github.com/thephpleague/commonmark/blob/master/src/Extension/ExtensionInterface.php) to the 
+
+* `sculpin_commonmark.extension`: To add a implementation of [`League\CommonMark\Extension\ExtensionInterface`](https://github.com/thephpleague/commonmark/blob/master/src/Extension/ExtensionInterface.php) to the
 [`League\CommonMark\Environment`](https://github.com/thephpleague/commonmark/blob/master/src/Environment.php).
 
 
