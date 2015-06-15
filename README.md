@@ -54,6 +54,18 @@ This bundle handles the following [Dependency Injection Tags](http://symfony.com
 * `sculpin_commonmark.extension`: To add a implementation of [`League\CommonMark\Extension\ExtensionInterface`](https://github.com/thephpleague/commonmark/blob/master/src/Extension/ExtensionInterface.php) to the
 [`League\CommonMark\Environment`](https://github.com/thephpleague/commonmark/blob/master/src/Environment.php).
 
+### Example
+
+To add the [CommonMark Table Extension](https://github.com/webuni/commonmark-table-extension) add the following to your `app/config/sculpin_services.yml`:
+
+```yml
+# app/config/sculpin_services.yml
+services:
+    webuni.commonmark.tablextension:
+        class: Webuni\CommonMark\TableExtension\TableExtension
+        tags:
+            - { name: sculpin_commonmark.extension }
+```
 
 ## License
 
