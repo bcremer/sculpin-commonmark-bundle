@@ -2,7 +2,7 @@
 namespace Bcremer\Sculpin\Bundle\CommonMarkBundle;
 
 use League\CommonMark\DocParser;
-use League\CommonMark\HtmlRendererInterface;
+use League\CommonMark\ElementRendererInterface;
 use Sculpin\Core\Converter\ConverterContextInterface;
 use Sculpin\Core\Converter\ConverterInterface;
 
@@ -22,7 +22,7 @@ class CommonMarkConverter implements ConverterInterface
      * @param DocParser             $parser
      * @param HtmlRendererInterface $renderer
      */
-    public function __construct(DocParser $parser, HtmlRendererInterface $renderer)
+    public function __construct(DocParser $parser, ElementRendererInterface $renderer)
     {
         $this->parser = $parser;
         $this->renderer = $renderer;
