@@ -16,9 +16,13 @@
             <argument type="service" id="sculpin_commonmark.environment" />
         </service>
 
-        <service id="sculpin_commonmark.converter" class="Bcremer\Sculpin\Bundle\CommonMarkBundle\CommonMarkConverter">
+        <service id="sculpin_commonmark.league_converter" class="League\CommonMark\Converter">
             <argument type="service" id="sculpin_commonmark.docparser" />
             <argument type="service" id="sculpin_commonmark.htmlrenderer" />
+        </service>
+
+        <service id="sculpin_commonmark.converter" class="Bcremer\Sculpin\Bundle\CommonMarkBundle\CommonMarkConverter">
+            <argument type="service" id="sculpin_commonmark.league_converter" />
             <tag name="sculpin.converter" alias="commonmark" />
         </service>
 

@@ -45,6 +45,7 @@ This bundle defines the following services in the sculpin DI Container:
 * `sculpin_commonmark.environment`
 * `sculpin_commonmark.docparser`
 * `sculpin_commonmark.htmlrenderer`
+* `sculpin_commonmark.league_converter`
 * `sculpin_commonmark.converter`
 * `sculpin_commonmark.event.commonmark`
 
