@@ -11,8 +11,8 @@
     }
   ],
   "require": {
-    "php": ">=7.0",
-    "league/commonmark": "~2.0.2"
+    "php": ">=7.3",
+    "league/commonmark": "~2.0.0"
   },
   "autoload": {
     "psr-4": {
