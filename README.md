@@ -12,7 +12,7 @@
 ```json
 {
     "require": {
-        "bcremer/sculpin-commonmark-bundle": "~0.4"
+        "bcremer/sculpin-commonmark-bundle": "~0.5"
     }
 }
 ```
@@ -62,9 +62,9 @@ To add the [CommonMark Table Extension](https://github.com/webuni/commonmark-tab
 ```yml
 # app/config/sculpin_services.yml
 services:
-    webuni.commonmark.tablextension:
-        class: Webuni\CommonMark\TableExtension\TableExtension
-        tags:
+    league.commonmark.tablextension:
+          class: League\CommonMark\Extension\Table\TableExtension
+          tags:
             - { name: sculpin_commonmark.extension }
 ```
 

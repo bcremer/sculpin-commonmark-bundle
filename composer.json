@@ -1,22 +1,30 @@
 {
-  "name": "bcremer/sculpin-commonmark-bundle",
-  "type": "library",
-  "keywords": ["sculpin", "bundle", "markdown", "commonmark"],
-  "description": "Sculpin league/commonmark bundle",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Benjamin Cremer",
-      "email": "bc@benjamin-cremer.de"
+    "name": "bcremer/sculpin-commonmark-bundle",
+    "type": "library",
+    "keywords": [
+        "sculpin",
+        "bundle",
+        "markdown",
+        "commonmark"
+    ],
+    "description": "Sculpin league/commonmark bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Benjamin Cremer",
+            "email": "bc@benjamin-cremer.de"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "league/commonmark": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bcremer\\Sculpin\\Bundle\\CommonMarkBundle\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
     }
-  ],
-  "require": {
-    "php": ">=7.3",
-    "league/commonmark": "^1.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "Bcremer\\Sculpin\\Bundle\\CommonMarkBundle\\": ""
-    }
-  }
 }
