@@ -21,7 +21,7 @@ class CommonMarkConverter implements ConverterInterface
     /**
      * {@inheritdoc}
      */
-    public function convert(ConverterContextInterface $converterContext)
+    public function convert(ConverterContextInterface $converterContext): void
     {
         $converterContext->setContent(
             $this->converter->convertToHtml($converterContext->content())
